@@ -1,3 +1,30 @@
+const addBookButton = document.querySelector("#book");
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const pages = document.getElementById("pages");
+const checkBox = document.getElementById("isRead");
+const container = document.querySelector(".container");
+const addBook = document.querySelector(".submit-button");
+const buttonContent = document.querySelector(".buttonContent");
+const form = document.querySelector("form")
+
+
+function whenPressed() {
+    addBookButton.addEventListener("click", () => {
+        buttonContent.style.visibility = "visible";
+    })
+    false
+}
+function makeInvisible() {
+    buttonContent.style.visibility = "hidden";
+}
+buttonContent.addEventListener("click", (e) => {
+    const Outside = !e.target.closest("form");
+    if (Outside) {
+        makeInvisible();
+    }
+})
+whenPressed();
 function Book (title, author, pages, readOrNot) {
     this.title = title;
     this.author = author;
@@ -5,11 +32,9 @@ function Book (title, author, pages, readOrNot) {
     this.readOrNot = readOrNot;
 }
 
-const Book1 = new Book("etc", "f", 3, "yes");
-const Book2 = new Book("the way of the superior man", "david deida" , 300, "no")
 
 
-console.log(Book2.author);
+
 
 
 

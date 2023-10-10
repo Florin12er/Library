@@ -8,12 +8,21 @@
 </head>
 <body>
     <div class="title">Library</div>
-   <div class="Books"><button>+ Add book</button></div>
-
-<div><p>Add new book</p>
-    
-</div>
-
+   <div class="Books"><button id="book">+ Add book</button></div>
+   <div class="buttonContent" id="button-content">
+    <form class="content" id="content">
+        <h3>Add new book</h3>
+        <input class="input" placeholder="Title" id="title" type="text" required maxlength="100">
+        <input placeholder="Author" id="author" class="input" type="text" maxlength="100" required>
+        <input placeholder="Pages" class="input" id="pages" type="number" max="1000000" required>
+        <div class="is-read">
+            <label for="is-read">Have you read it?</label>
+            <input id="isRead" class="checkbox" type="checkbox">
+        </div>
+        <button class="submit-button" type="submit">Submit</button>
+    </form>
+   <div class="container"></div>
+   </div>
     <script src="app.js"></script>
 </body>
 </html>
