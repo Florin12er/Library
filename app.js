@@ -18,12 +18,13 @@ function makeInvisible() {
     buttonContent.style.visibility = "hidden";
 }
 
-function Book (title, author, pages, readOrNot) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.readOrNot = readOrNot;
-}
+class Book {
+    constructor(title, author, pages, readOrNot) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.readOrNot = readOrNot;}
+    }
 function createBookDescription(index) {
     const bookDescription = `
     <div id="Card-container" class="card-container" id="${index}">
